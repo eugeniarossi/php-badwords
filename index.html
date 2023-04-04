@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Badwords</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- /google fonts -->
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- form -->
     <form action="bad_words.php" method="GET">
         <!-- input paragrafo -->
-        <div>
-            <label for="p">Enter text</label>
-            <input type="text" name="paragraph" id="p">
+        <div class="input" id="paragraph-input">
+            <label for="paragraph">Inserisci il testo</label>
+            <textarea id="paragraph" type="text" name="paragraph" cols="35" rows="6"></textarea>
         </div>
         <!-- /input paragrafo -->
         <!-- input parola da censurare -->
-        <div>
-            <label for="word">Enter word to censore</label>
+        <div class="input">
+            <label for="word">Inserisci la parola da censurare</label>
             <input type="text" name="word" id="word">
         </div>
         <!-- /input parola da censurare -->
-        <button>Send</button>
+        <button>Invia</button>
     </form>
     <!-- /form -->
 </body>
+
 </html>

@@ -1,0 +1,84 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+
+body {
+    background-color: #1b1b1b;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+form,
+.container {
+    border: 1px solid #32ffea;
+    border-radius: .625rem;
+    padding: 1.5625rem 2.1875rem;
+}
+
+form .input input,
+form button,
+form #paragraph {
+    background-color: inherit;
+    color: whitesmoke;
+    border: 1px solid #32ffea;
+    border-radius: .25rem;
+    padding: .4375rem .75rem;
+}
+
+/* FORM */
+
+form,
+form .input,
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+form .input {
+    margin-bottom: 1.25rem;
+}
+
+form .input input,
+form #paragraph {
+    margin-top: .625rem;
+    border-color: #0e3632;
+    font-family: 'Roboto', sans-serif;
+}
+
+form button {
+    align-self: flex-end;
+    margin-top: .375rem;
+}
+
+/* SECOND PAGE */
+
+.container {
+    margin: 1.25rem;
+    max-width: 28.125rem;
+}
+
+.container h2 {
+    margin-bottom: 1.5625rem;
+}
+
+.container p {
+    overflow: hidden;
+}
+
+.container .length {
+    align-self: flex-start;
+    border: 1px solid #0e3632;
+    border-radius: .25rem;
+    padding: .4375rem .75rem;
+    margin-top: 1.25rem;
+}

@@ -16,25 +16,26 @@ $censored_p = str_replace($badword, '***', $paragraph);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Badwords</title>
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- testo non censurato -->
-    <div>
+    <div class="container">
         <h2>Testo non censurato</h2>
         <!-- stampo il paragrafo (prima lettera maiuscola) -->
         <p>Testo: <?php echo ucfirst($paragraph); ?></p>
         <!-- stampo la lunghezza del paragrafo -->
-        <span>Numero dei caratteri del testo: <?php echo strlen($paragraph); ?></span>
+        <div class="length"><?php echo strlen($paragraph); ?></div>
     </div>
     <!-- /testo non censurato -->
-    <hr>
     <!-- testo censurato -->
-    <div>
+    <div class="container">
         <h2>Testo censurato</h2>
         <!-- stampo il paragrafo censurato -->
         <p>Testo: <?php echo ucfirst($censored_p); ?></p>
         <!-- stampo la lunghezza del paragrafo censurato -->
-        <span>Numero dei caratteri del testo: <?php echo strlen($censored_p); ?></span>
+        <div class="length"><?php echo strlen($censored_p); ?></div>
     </div>
     <!-- /testo censurato -->
 </body>
