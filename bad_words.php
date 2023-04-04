@@ -1,7 +1,9 @@
 <?php
 // salvo nelle variabili i parametri
 $paragraph = $_GET['paragraph'];
-$word = $_GET['word'];
+$badword = $_GET['word'];
+// salvo una funzione che sostituisce la parola con 3 asterischi
+$censored_p = str_replace($badword, '***', $paragraph);
 
 // stampo in pagina il valore del parametro 'word'
 // echo $_GET['word']
@@ -16,11 +18,24 @@ $word = $_GET['word'];
     <title>PHP Badwords</title>
 </head>
 <body>
+    <!-- testo non censurato -->
     <div>
-        <!-- stampo il paragrafo -->
-        <p><?php echo $paragraph; ?></p>
+        <h2>Testo non censurato</h2>
+        <!-- stampo il paragrafo (prima lettera maiuscola) -->
+        <p>Testo: <?php echo ucfirst($paragraph); ?></p>
         <!-- stampo la lunghezza del paragrafo -->
-        <span><?php echo strlen($paragraph); ?></span>
+        <span>Numero dei caratteri del testo: <?php echo strlen($paragraph); ?></span>
     </div>
+    <!-- /testo non censurato -->
+    <hr>
+    <!-- testo censurato -->
+    <div>
+        <h2>Testo censurato</h2>
+        <!-- stampo il paragrafo censurato -->
+        <p>Testo: <?php echo ucfirst($censored_p); ?></p>
+        <!-- stampo la lunghezza del paragrafo censurato -->
+        <span>Numero dei caratteri del testo: <?php echo strlen($censored_p); ?></span>
+    </div>
+    <!-- /testo censurato -->
 </body>
 </html>
